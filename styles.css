@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --maincolor: #2D336B;
+    --subcolor: #7886C7;
+    --backgroundcolor: #FFF2F2;
+    --lightsubcolor: #7886C7;
+}
+
+body {
+    margin: 0px;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+body > * {
+    border: 1px solid black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr; /*Make it responsive*/
+    
+
+    .sidebar {
+        display: grid;
+        grid-template-rows: 10% 1fr 1fr;
+        grid-template-columns: 1fr;
+        background-color: var(--maincolor);
+        color: white;
+        
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                font-size: larger;
+                margin-right: 20px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px 0px 0px 0px;
+
+            li {
+                margin: 0px 0px 5px 20px;
+                padding: 10px;
+                font-size: large;
+                color: white;
+                transition-duration: 0.2s;
+
+                * {
+                    color: white;
+                    padding: 0px 10px 0px 0px;
+                }
+            }
+
+            li:hover {
+                color: var(--subcolor);
+                cursor: pointer;
+                /* Hover stuff */
+                * {
+                    color: var(--subcolor);
+                }
+            }
+        }
+
+    }
+
+    .dashboard_area {
+        background-color: var(--backgroundcolor);
+        .header {
+            .top {
+                display: grid;
+                grid-template-columns: 5fr 300px;
+
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: start;
+                    margin: 0px 50px;
+
+                    input {
+                        width: 50em;
+                        height: 2.5em;
+                        margin-left: 15px;
+                        border-radius: 30px;
+                        border: none;
+                        background-color: lightgray;
+                    }
+
+                    button {
+                        height: 2.5em;
+                        width: 3em;
+                        background-color: var(--backgroundcolor);
+                        border: none;
+                        transition-duration: 0.2s;
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+
+                    button:hover {
+                        color: var(--subcolor);
+                        cursor: pointer;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+            .bottom {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+
+                .left {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-left: 50px;
+
+                    span {
+                        display: block;
+                        margin-left: 20px;
+                        * {
+                            margin:0px;
+                        }
+                    }
+
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    button {
+                        width: 120px;
+                        height: 50px;
+                        border-radius: 40px;
+                        border: none;
+                        background-color: var(--maincolor);
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .work_area {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+
+
+            .left {
+                display: block;
+                .work {
+                    display: grid;
+                    grid-template-columns: auto;
+                    .card {
+                        border-left: 3px solid var(--maincolor);
+
+                        h4 {
+                            font-size: small;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    
+}

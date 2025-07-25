@@ -16,7 +16,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: minmax(100px, 1fr) minmax(500px,5fr); /*Make it responsive*/
+    grid-template-columns: minmax(250px, 250px) minmax(100px,5fr); /*Make it responsive*/
     grid-template-rows: 1fr;
     
 
@@ -110,17 +110,11 @@ body {
                     }
                 }
 
-                span {
+                .profile {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-evenly;
-
-                    img {
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                    }
 
                     i {
                         font-size: 20px;
@@ -130,6 +124,28 @@ body {
                     i:hover {
                         color: var(--subcolor);
                         cursor: pointer;
+                    }
+
+                    span {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        a:hover {
+                            color: var(--subcolor)
+                        }
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            position: relative;
+                            right: 20px;
+                        }
                     }
                 }
             }
@@ -250,9 +266,7 @@ body {
                                     cursor: pointer;
                                 }
                             }
-                        }
-                        .link_icons
-                        
+                        }                        
                     }
                 }
                 
@@ -291,7 +305,7 @@ body {
                         flex-direction: row;
                         justify-content: start;
                         align-items: center;
-                        margin: 2em 0px;
+                        margin: 1.3em 0px;
 
                         img {
                             width: 3em;
